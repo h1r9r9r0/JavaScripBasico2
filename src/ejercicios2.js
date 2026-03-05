@@ -213,6 +213,19 @@ function contarVocales(texto) {
 	// No distingue entre mayúsculas y minúsculas.
 	// Ejemplo: contarVocales("Hola Mundo") → 4
 	// Tu código:
+
+
+
+    let contador = 0;
+    let letras = texto.toLowerCase();
+
+    for (let i = 0; i < letras.length; i++) {
+        if ("aeiou".includes(letras[i])) {
+            contador++;
+        }
+    }
+    return contador;
+
 }
 
 // Test 13:
@@ -224,6 +237,18 @@ function formatearNombre(nombre, apellido, mayusculas) {
 	// Ejemplo: formatearNombre("juan", "perez", true) → "JUAN PEREZ"
 	// Ejemplo: formatearNombre("juan", "perez", false) → "Juan Perez"
 	// Tu código:
+
+
+
+    if (mayusculas) {
+        return (nombre + " " + apellido).toUpperCase();
+    }
+
+    let n = nombre.charAt(0).toUpperCase() + nombre.slice(1).toLowerCase();
+    let a = apellido.charAt(0).toUpperCase() + apellido.slice(1).toLowerCase();
+
+    return n + " " + a;
+
 }
 
 // ██████  BUCLES BÁSICOS ████████████████████████
@@ -235,6 +260,16 @@ function sumarHasta(limite) {
 	// Ejemplo: sumarHasta(5) → 1+2+3+4+5 = 15
 	// Usa un bucle for o while.
 	// Tu código:
+
+
+
+    let suma = 0;
+
+    for (let i = 1; i <= limite; i++) {
+        suma += i;
+    }
+
+    return suma;
 }
 
 // Test 15:
@@ -244,6 +279,18 @@ function obtenerParesHasta(limite) {
 	// Ejemplo: obtenerParesHasta(10) → [0, 2, 4, 6, 8, 10]
 	// Usa un bucle for o while.
 	// Tu código:
+
+
+
+    let pares = [];
+
+    for (let i = 0; i <= limite; i++) {
+        if (i % 2 === 0) {
+            pares.push(i);
+        }
+    }
+
+    return pares;
 }
 
 // Test 16:
@@ -254,6 +301,14 @@ function factorial(n) {
 	// Nota: factorial(0) = 1 por definición.
 	// Usa un bucle for o while.
 	// Tu código:
+
+
+
+    for (let i = 1; i <= n; i++) {
+        resultado *= i;
+    }
+
+    return resultado;
 }
 
 // Test 17:
@@ -262,6 +317,16 @@ function buscarNumero(array, objetivo) {
 	// Devuelve true si el objetivo está en el array, false en caso contrario.
 	// Usa un bucle for para recorrer el array (no uses .includes()).
 	// Tu código:
+
+
+
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === objetivo) {
+            return true;
+        }
+    }
+
+    return false;
 }
 
 // Test 18:
@@ -273,6 +338,20 @@ function obtenerPrimerosN(array, n) {
 	// NO uses .slice(), hazlo con un bucle.
 	// Ejemplo: obtenerPrimerosN([1,2,3,4,5], 3) → [1,2,3]
 	// Tu código:
+
+
+
+    if (n <= 0) {
+        return [];
+    }
+
+    let resultado = [];
+
+    for (let i = 0; i < array.length && i < n; i++) {
+        resultado.push(array[i]);
+    }
+
+    return resultado;
 }
 
 // ██████  NO MODIFICAR DESDE AQUÍ ███████████
