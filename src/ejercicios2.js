@@ -97,14 +97,7 @@ function validarContraseña(password) {
     }
 
     return false;
-	// Recibe un string con una contraseña.
-	// Devuelve true si cumple TODAS estas condiciones:
-	// - Tiene al menos 8 caracteres
-	// - Contiene al menos una letra mayúscula
-	// - Contiene al menos un número
-	// De lo contrario, devuelve false.
-	// Pista: Usa métodos de string como .length, .includes(), o expresiones regulares simples.
-	// Tu código:
+
 }
 
 // Test 7:
@@ -192,7 +185,7 @@ function calcularPropina(total, porcentaje) {
 
 // ██████  STRINGS Y VALIDACIONES ████████████████████████
 
-// c:
+// test 11:
 function esPalabraPalindroma(palabra) {
 	// Recibe un string.
 	// Devuelve true si la palabra se lee igual de izquierda a derecha
@@ -230,17 +223,7 @@ function contarVocales(texto) {
 
 // Test 13:
 function formatearNombre(nombre, apellido, mayusculas) {
-	// Recibe: nombre (string), apellido (string), mayusculas (boolean)
-	// Devuelve el nombre completo formateado:
-	// - Si mayusculas es true: "NOMBRE APELLIDO"
-	// - Si mayusculas es false: "Nombre Apellido" (primera letra mayúscula, resto minúscula)
-	// Ejemplo: formatearNombre("juan", "perez", true) → "JUAN PEREZ"
-	// Ejemplo: formatearNombre("juan", "perez", false) → "Juan Perez"
-	// Tu código:
-
-
-
-    if (mayusculas) {
+	if (mayusculas) {
         return (nombre + " " + apellido).toUpperCase();
     }
 
