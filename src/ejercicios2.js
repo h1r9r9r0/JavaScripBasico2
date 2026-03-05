@@ -109,18 +109,29 @@ function validarContraseña(password) {
 
 // Test 7:
 function calcularIMC(peso, altura) {
-	// Recibe: peso (kg, número), altura (metros, número)
-	// Calcula el IMC: peso / (altura * altura)
-	// Devuelve un string con la clasificación:
-	// - IMC < 18.5 → "Bajo peso"
-	// - 18.5 <= IMC < 25 → "Peso normal"
-	// - 25 <= IMC < 30 → "Sobrepeso"
-	// - IMC >= 30 → "Obesidad"
-	// Tu código:
+
+    let imc = peso / (altura * altura);
+
+    if (imc < 18.5) {
+        return "Bajo peso";
+    } else if (imc < 25) {
+        return "Peso normal";
+    } else if (imc < 30) {
+        return "Sobrepeso";
+    } else {
+        return "Obesidad";
+    }
 }
 
 // Test 8:
 function esMultiplo(num1, num2) {
+
+
+    if (num1 % num2 === 0 || num2 % num1 === 0) {
+        return true;
+    }
+
+    return false;
 	// Recibe dos números enteros.
 	// Devuelve true si num1 es múltiplo de num2 o viceversa.
 	// Ejemplo: esMultiplo(10, 5) → true, esMultiplo(7, 3) → false
