@@ -148,6 +148,32 @@ function obtenerEstacion(mes) {
 	// - Septiembre, Octubre, Noviembre → "Otoño"
 	// Si el mes no es válido, devuelve "Mes inválido"
 	// Tu código:
+
+
+    switch (mes) {
+        case 12:
+        case 1:
+        case 2:
+            return "Invierno";
+
+        case 3:
+        case 4:
+        case 5:
+            return "Primavera";
+
+        case 6:
+        case 7:
+        case 8:
+            return "Verano";
+
+        case 9:
+        case 10:
+        case 11:
+            return "Otoño";
+
+        default:
+            return "Mes inválido";
+    }
 }
 
 // Test 10:
@@ -157,17 +183,27 @@ function calcularPropina(total, porcentaje) {
 	// Ejemplo: calcularPropina(100, 15) → 15.00
 	// Pista: Usa toFixed(2) y luego convierte a número si es necesario.
 	// Tu código:
+
+
+    let propina = total * (porcentaje / 100);
+
+    return Number(propina.toFixed(2));
 }
 
 // ██████  STRINGS Y VALIDACIONES ████████████████████████
 
-// Test 11:
+// c:
 function esPalabraPalindroma(palabra) {
 	// Recibe un string.
 	// Devuelve true si la palabra se lee igual de izquierda a derecha
 	// y de derecha a izquierda (ignora mayúsculas/minúsculas).
 	// Ejemplo: "reconocer" → true, "hola" → false, "Ana" → true
 	// Tu código:
+
+    let texto = palabra.toLowerCase();
+    let invertida = texto.split("").reverse().join("");
+
+    return texto === invertida;
 }
 
 // Test 12:
